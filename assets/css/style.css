@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ :root{
+    --header-left: #0a121f;
+    --header-right: #0a1210;
+    --header-left:#0a121f;
+    --header-right:#0a1220;
+    --btn-color:#3A68B8;
+    --introduction-left:#08101e;
+    --introduction-right:#0a101e;
+    --introduction-h6:#3A68B8;
+ }
+
+
+ .open-sans-qalinFont {
+   font-family: "Open Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 800;
+   font-style: normal;
+   font-variation-settings:
+     "wdth" 100;
+ }
+
+ 
+
+ header {
+   
+    background: linear-gradient( to right, var(--header-left), var(--header-right));
+ }
+ 
+header .menimbtn {
+background-color: #3a68b8;
+width: 100px;
+height: 47px;
+color: aliceblue;
+}
+header .menimbtn:hover {
+    background-color: #3a68b8 ;
+    color: aliceblue;
+}
+
+
+
+/* position: static---> sabit qalir hec bi sey deyismir 
+
+relative---> obyecti mueyyen yere qoyur ve sen ölçü yazırsan 
+
+absolute--- ekranı tek seferlik tutur ve usaq elemente verilir
+
+fixed--- bütün ekranı sürüşdürülende bele tutur ve ana elemente   */
+.curtain-menu{
+   right: 0;
+background-color: rgba(0, 0, 0, .7);
+width:  0;
+height: 100vh;
+z-index:9999 ;
+position: fixed;
+overflow-x: hidden;
+transition: 0.5s ease;
+}
+
+.curtain-menu.aktiv {
+width: 40%;
+}
+
+.mobile-links {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   height: 100vh;
+}
+
+
+
+.mobile-links a {
+   color: antiquewhite ;
+   text-decoration: none;
+   font-size: 35px;
+  
+}
+.fa-xmark{
+   color: aliceblue;
+   position: absolute ;
+   right: 10px;
+}
+
+
+.introduction {
+   background: linear-gradient(to bottom, var(--introduction-left), var(--introduction-right));
+
+}
+
+.introduction .intro-left h6{
+   color: #3a68b8;
+   text-transform: uppercase;
+}
+
+
+
+.introduction .intro-left h2{
+   font-size: 50px;
+}
+
+.introduction .intro-left article {
+   color:#fff;
+   opacity: .7;
+}
+
+.introduction .intro-left a, .introduction .intro-left button {
+   background-color: var(--introduction-h6);
+   color:#fff;
+   text-decoration: none;
+   width: 171px;
+   height: 57px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   
+   border: none;
+
+}
+
+#watch-video-modal {
+   position: fixed;
+   background-color: #222;
+   width: 0;
+   height: 100vh;
+   z-index: 9999;
+   overflow: hidden;
+}
+
+
+.modal-body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+
+#watch-video-modal.aktiv{
+width: 100%;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+   
+ header .logo {
+   width: 230px;
+} 
+}
