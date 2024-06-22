@@ -37,11 +37,12 @@
 
  
 
- header {
+ header{
    
-    background: linear-gradient( to right, var(--header-left), var(--header-right));
+   background : linear-gradient( to right, var(--header-left), var(--header-right));
  }
  
+
 header .menimbtn {
 background-color: #3a68b8;
 width: 100px;
@@ -100,7 +101,7 @@ width: 40%;
 }
 
 
-.introduction {
+body {
    background: linear-gradient(to bottom, var(--introduction-left), var(--introduction-right));
 
 }
@@ -139,10 +140,12 @@ width: 40%;
 #watch-video-modal {
    position: fixed;
    background-color: #222;
-   width: 0;
+   width: 100%;
    height: 100vh;
-   z-index: 9999;
+   z-index: 999999;
    overflow: hidden;
+transform: scale(0);
+transition: all 0.2s linear;
 }
 
 
@@ -153,13 +156,37 @@ width: 40%;
    height: 100vh;
 }
 
+.fa-circle-xmark{
+ color: #fff;
+ font-size: 40px;
+ position: absolute;
+ top: 40px;
+ right: 40px ;
+ cursor: pointer;
+ z-index: 9999;
+   
+}
 
 #watch-video-modal.aktiv{
-width: 100%;
+transform: scale(1);
+}
+
+.swiper-slide img{
+   width: 100%;
+   height: 70px;
 }
 
 
+.brain-right button{
+   background-color: #3A68B8;
+}
 
+.brain-right article{
+   color: #b3b5ba;
+}
+.brain-left img{
+   width: 600px;
+}
 
 
 @media (max-width: 768px) {
@@ -167,4 +194,10 @@ width: 100%;
  header .logo {
    width: 230px;
 } 
+.brain-left img{
+   width: 350px;
 }
+
+
+}
+
